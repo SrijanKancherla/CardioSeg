@@ -27,43 +27,39 @@ Scanpy-loaded datasets.
 
 ## Installation
 
-CardioSeg is easiest to install with conda or mamba because napari, Qt, PyTorch,
-and image I/O libraries have platform-specific native dependencies.
+CardioSeg is recommended to be installed using conda or mamba due to platform-specific dependencies including Qt, PyTorch, napari, and image I/O libraries.
 
-### CPU / cross-platform environment
+### Quick start
 
 ```bash
+git clone https://github.com/<username>/cardioseg.git
+cd cardioseg
+
 mamba env create -f environment.yml
 mamba activate cardioseg
-```
+
+pip install -e .
+
+python -m cardioseg.app
 
 If you use conda instead of mamba:
 
-```bash
 conda env create -f environment.yml
 conda activate cardioseg
-```
 
 ### Windows CUDA environment
 
 Use the Windows environment only on machines with a CUDA 11.8-compatible NVIDIA
 GPU and driver:
 
-```powershell
 mamba env create -f environment_win.yml
 mamba activate cardioseg-win
-```
+
+pip install -e .
+
+python -m cardioseg.app
 
 For Windows machines without CUDA, use `environment.yml` instead.
-
-### Development install without conda
-
-If you already manage native dependencies separately, install the package in
-editable mode with development tools:
-
-```bash
-python -m pip install -e ".[dev]"
-```
 
 ## Running the application
 
