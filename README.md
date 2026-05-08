@@ -163,3 +163,12 @@ CardioSeg builds on the scientific Python imaging ecosystem, especially:
 - Scanpy
 - PyTorch
 - tifffile
+
+CardioSeg has been tested on:
+
+- macOS (Apple Silicon)
+- Windows 10
+- Python 3.10
+- CUDA 11.8 
+
+Performance depends on image size and available GPU memory.
