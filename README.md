@@ -1,8 +1,7 @@
 # CardioSeg
 
 CardioSeg is an interactive Python application for cell and nuclei segmentation,
-manual correction, spatial annotation, and quantitative export in H&E-stained
-cardiomyocyte histology images.
+manual correction, spatial annotation, and quantitative analysis of H&E-stained cardiac histology images.
 
 The application combines a napari-based desktop GUI with Cellpose segmentation,
 scikit-image measurements, and optional spatial transcriptomics annotation via
@@ -41,39 +40,37 @@ mamba activate cardioseg
 pip install -e .
 
 python -m cardioseg.app
+```
 
 If you use conda instead of mamba:
 
+```bash
 conda env create -f environment.yml
 conda activate cardioseg
+```
 
 ### Windows CUDA environment
 
-Use the Windows environment only on machines with a CUDA 11.8-compatible NVIDIA
-GPU and driver:
+Use the Windows environment only on machines with a CUDA 11.8-compatible NVIDIA GPU and driver:
 
+```powershell
 mamba env create -f environment_win.yml
 mamba activate cardioseg-win
 
 pip install -e .
 
 python -m cardioseg.app
+```
 
 For Windows machines without CUDA, use `environment.yml` instead.
 
+````md
 ## Running the application
 
-After activating the environment, start the GUI with:
-
-```bash
-cardioseg
-```
-
-You can also run the package entry point directly:
+After installation, CardioSeg can be launched using:
 
 ```bash
 python -m cardioseg.app
-```
 
 ## Basic workflow
 
@@ -103,7 +100,7 @@ environment.yml                    # CPU/cross-platform conda environment
 environment_win.yml                # Windows CUDA conda environment
 pyproject.toml                     # Packaging metadata and console script
 README.md                          # Project overview and usage
-LICENSE                            # MIT license
+LICENSE                            # CC-BY license
 ```
 
 ## Outputs
@@ -126,9 +123,23 @@ For environment validation, create at least one fresh conda environment from
 `environment.yml`; on CUDA-enabled Windows machines, also validate
 `environment_win.yml`.
 
+````md
+## System requirements
+
+CardioSeg has been tested on:
+
+- macOS (Intel and Apple Silicon)
+- Windows 10/11
+- Python 3.10
+- CUDA 11.8 
+
+Performance depends on image size and available GPU memory.
+
 ## License
 
-Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
+```md
+[![CC BY 4.0][cc-by-shield]][cc-by]
+```
 
 This work is licensed under a
 [Creative Commons Attribution 4.0 International License][cc-by].
