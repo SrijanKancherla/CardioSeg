@@ -1,0 +1,79 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cardioseg"
+version = "0.1.0"
+description = "Interactive cell and nuclei segmentation for H&E-stained cardiomyocyte histology using napari and Cellpose."
+requires-python = ">=3.10,<3.12"
+authors = [
+    { name = "Srijan Karthik Kancherla", email = "srijankk@uio.no" }
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = ["cardiomyocyte", "cell-segmentation", "histology", "napari", "cellpose"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Image Processing",
+]
+dependencies = [
+    "cellpose",
+    "czifile",
+    "imageio",
+    "matplotlib",
+    "napari",
+    "napari-ome-zarr",
+    "numpy",
+    "ome-zarr",
+    "openslide-python",
+    "pandas",
+    "pillow",
+    "pyarrow",
+    "pyyaml",
+    "qtpy",
+    "rich",
+    "scanpy",
+    "scikit-image",
+    "scikit-learn",
+    "scipy",
+    "stardist",
+    "tifffile",
+    "torch",
+    "torchvision",
+    "tqdm",
+    "zarr",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "pytest",
+    "ruff",
+]
+
+[project.scripts]
+cardioseg = "cardioseg.app:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["cardioseg*"]
+exclude = ["data*"]
+
+[tool.setuptools.package-data]
+cardioseg = ["gui/*.qss"]
+
+[tool.black]
+line-length = 88
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]

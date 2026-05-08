@@ -1,0 +1,40 @@
+QWidget {
+    font-family: Inter, Segoe UI, Arial;
+    font-size: 12px;
+}
+
+#TitleLabel {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 6px;
+}
+
+QGroupBox {
+    font-weight: bold;
+    border: 1px solid #444;
+    border-radius: 6px;
+    margin-top: 8px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 8px;
+    padding: 0 4px 0 4px;
+}
+
+QPushButton {
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+QPushButton:hover {
+    background-color: #3a3a3a;
+}
+
+QLabel {
+    padding: 2px;
+}
+
+

@@ -1,0 +1,59 @@
+name: cardioseg-win
+
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+
+# Windows GPU environment for CUDA 11.8-capable systems. If CUDA is not
+# available, create environment.yml instead for a CPU-only installation.
+dependencies:
+  - python=3.10
+  - pip
+
+  # Core scientific stack
+  - numpy
+  - scipy
+  - pandas
+  - pyarrow
+  - scikit-image
+  - scikit-learn
+  - scanpy
+
+  # Visualization and GUI
+  - matplotlib
+  - napari
+  - pillow
+  - pyqt=5.15.*
+  - qtpy
+
+  # Image I/O
+  - czifile
+  - imageio
+  - napari-ome-zarr
+  - ome-zarr
+  - openslide-python
+  - tifffile
+  - zarr
+
+  # Machine learning (GPU / CUDA 11.8)
+  - pytorch=2.3.*
+  - torchvision=0.18.*
+  - torchaudio=2.3.*
+  - pytorch-cuda=11.8
+
+  # Utilities
+  - pyyaml
+  - rich
+  - tqdm
+
+  # Development
+  - black
+  - pytest
+  - ruff
+
+  # Packages currently best installed from PyPI for this project.
+  - pip:
+      - cellpose
+      - stardist
+      - -e .

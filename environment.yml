@@ -1,0 +1,55 @@
+name: cardioseg
+
+channels:
+  - conda-forge
+
+# Cross-platform CPU development environment. For Windows GPU/CUDA installs,
+# use environment_win.yml instead.
+dependencies:
+  - python=3.10
+  - pip
+
+  # Core scientific stack
+  - numpy
+  - scipy
+  - pandas
+  - pyarrow
+  - scikit-image
+  - scikit-learn
+  - scanpy
+
+  # Visualization and GUI
+  - matplotlib
+  - napari
+  - pillow
+  - pyqt
+  - qtpy
+
+  # Image I/O
+  - czifile
+  - imageio
+  - napari-ome-zarr
+  - ome-zarr
+  - openslide-python
+  - tifffile
+  - zarr
+
+  # Machine learning (CPU)
+  - pytorch
+  - torchvision
+
+  # Utilities
+  - pyyaml
+  - rich
+  - tqdm
+
+  # Development
+  - black
+  - pytest
+  - ruff
+
+  # Packages currently best installed from PyPI for this project.
+  - pip:
+      - cellpose
+      - stardist
+      - -e .
