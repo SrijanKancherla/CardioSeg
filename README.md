@@ -11,7 +11,7 @@ The application combines a napari-based desktop GUI with Cellpose segmentation, 
 
 ## Features
 
-- Load common microscopy image formats including TIFF, PNG, JPEG, and CZI
+- Load common microscopy image formats including TIFF, PNG and JPEG
 - Segment cells and nuclei using configurable Cellpose diameter settings
 - Inspect, recolor, and filter label layers in napari
 - Manually correct segmentation masks and annotations
