@@ -110,21 +110,11 @@ LICENSE                            # License information
 
 ## Outputs
 
-CardioSeg currently focuses on CSV-based measurement export. The project also includes helper modules for image and annotation interoperability with microscopy and spatial-analysis ecosystems.
-
----
-
-## Publication Readiness Checklist
-
-Before publishing a release, validate the project from a clean checkout:
+CardioSeg currently focuses on CSV-based measurement export that can be loaded back into the GUI for retrospective analysis. In addition, the search bar allows for the output of a text file with statistical measurements, by the command:
 
 ```bash
-python -m pip install -e ".[dev]"
-python -m compileall cardioseg
-python -m pytest
+stats()
 ```
-
-Also validate installation in at least one fresh conda environment created from `environment.yml`. On CUDA-enabled Windows systems, validate `environment_win.yml` as well.
 
 ---
 
